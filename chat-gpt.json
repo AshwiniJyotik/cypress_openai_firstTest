@@ -1,0 +1,12 @@
+{
+  "fileName": "login",
+  "steps": [
+    "go to saucedemo.com",
+    "run the test before each test"
+    "enter username standard_user",
+    "enter password secret_sauce",
+    "click Login",
+    "url should contain inventory",
+    "check and correct the syntax & formatting error"
+  ]
+}
