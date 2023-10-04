@@ -1,12 +1,46 @@
-{
-  "fileName": "login",
-  "steps": [
-    "go to saucedemo.com",
-    "run the test before each test"
-    "enter username standard_user",
-    "enter password secret_sauce",
-    "click Login",
-    "url should contain inventory",
-    "check and correct the syntax & formatting error"
-  ]
-}
+[
+  {
+    "fileName": "login",
+    "steps": [
+      "Visit the website saucedemo.com",
+      "Run the login test before each test",
+      "Define an export function named 'login'",
+      "Enter the username 'standard_user'",
+      "Enter the password 'secret_sauce'",
+      "Click the 'Login' button",
+      "Ensure the URL contains 'inventory'",
+      "Check and correct any syntax or formatting errors"
+    ]
+  },
+  {
+    "fileName": "cartValidation",
+    "steps": [
+      "Import './login.cy' file",
+      "Define an export function named 'cartValidation'",
+      " - get on '.shopping_cart_link' and set  timeout: 15000 and click",
+      " - get '.cart_list' as save in reference object variable '$cartList' and find cart_item and if cart_item length is 0",
+      "    - Then Click on '[data-test=\"continue-shopping\"]'",
+      "    - Wait for 1000 milliseconds using 'cy.wait'",
+      "    - log the message 'No item present and clicked on Continue shopping'",
+      " - get '.inventory_item_name' each and save it in '$allitemsinlist' reference object variable :",
+      "    - get text for each '$allitemsinlist' and save it in const productName variable ",
+      "    - log all the productName: ",
+      "    - Check if 'productName' include the word 'Shirt'",
+      "    - wrap allitemsinlist",
+      "    - Find the parents class .inventory_item and click '.btn_inventory' ",
+      "Correct all syntax and formatting errors in the code"
+    ]
+  },
+  {
+    "fileName": "testcases_execution",
+    "steps": [
+      "Import {login} from './login.cy' file",
+      "Import  {cartValidation} from './cartValidation.cy' file",
+      "describe Create test cases for 'Cart and Checkout Validation':",
+      "   - Before each test, 'login' function from 'login.cy'",
+      "   - Test: 'Cart validation & add item have a word shirt'",
+      "       - 'cartValidation' "
+
+    ]
+  }
+]

@@ -1,4 +1,5 @@
 module.exports = {
+  projectId: 'dt9r4x',
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
